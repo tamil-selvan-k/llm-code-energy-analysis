@@ -1,0 +1,186 @@
+{
+  "version": "1.0",
+  "description": "Benchmark task manifest for energy footprint research",
+  "tasks": [
+    {
+      "id": "task01",
+      "name": "mergesort",
+      "category": "sorting_searching",
+      "description": "Sort 100,000 random integers",
+      "data_size": 100000,
+      "complexity_class": "O(n log n)"
+    },
+    {
+      "id": "task02",
+      "name": "binary_search",
+      "category": "sorting_searching",
+      "description": "Binary search in sorted array of 1M elements, 10K queries",
+      "data_size": 1000000,
+      "complexity_class": "O(k log n)"
+    },
+    {
+      "id": "task03",
+      "name": "topk",
+      "category": "sorting_searching",
+      "description": "Find top-K (K=100) elements from 500K elements",
+      "data_size": 500000,
+      "complexity_class": "O(n log k)"
+    },
+    {
+      "id": "task04",
+      "name": "sort_strings",
+      "category": "sorting_searching",
+      "description": "Sort 50,000 random strings by length then alphabetically",
+      "data_size": 50000,
+      "complexity_class": "O(n log n * m)"
+    },
+    {
+      "id": "task05",
+      "name": "median",
+      "category": "sorting_searching",
+      "description": "Find median of 500K unsorted integers",
+      "data_size": 500000,
+      "complexity_class": "O(n log n)"
+    },
+    {
+      "id": "task06",
+      "name": "anagram_groups",
+      "category": "string_processing",
+      "description": "Group 50K words into anagram groups",
+      "data_size": 50000,
+      "complexity_class": "O(n * m log m)"
+    },
+    {
+      "id": "task07",
+      "name": "regex_match",
+      "category": "string_processing",
+      "description": "Match complex patterns in 100K-line text",
+      "data_size": 100000,
+      "complexity_class": "O(n * p)"
+    },
+    {
+      "id": "task08",
+      "name": "palindrome",
+      "category": "string_processing",
+      "description": "Find all palindromic substrings in a 10K-char string",
+      "data_size": 10000,
+      "complexity_class": "O(n^2) typical, O(n) Manacher"
+    },
+    {
+      "id": "task09",
+      "name": "string_compress",
+      "category": "string_processing",
+      "description": "Run-length encoding of 1M character string",
+      "data_size": 1000000,
+      "complexity_class": "O(n)"
+    },
+    {
+      "id": "task10",
+      "name": "levenshtein",
+      "category": "string_processing",
+      "description": "Compute edit distance for 500 pairs of strings (~100 chars each)",
+      "data_size": 500,
+      "complexity_class": "O(k * m * n)"
+    },
+    {
+      "id": "task11",
+      "name": "matrix_multiply",
+      "category": "numerical_computation",
+      "description": "Multiply two 300x300 matrices (pure Python)",
+      "data_size": 300,
+      "complexity_class": "O(n^3)"
+    },
+    {
+      "id": "task12",
+      "name": "prime_sieve",
+      "category": "numerical_computation",
+      "description": "Sieve of Eratosthenes up to 1,000,000",
+      "data_size": 1000000,
+      "complexity_class": "O(n log log n)"
+    },
+    {
+      "id": "task13",
+      "name": "fibonacci_dp",
+      "category": "numerical_computation",
+      "description": "Compute first 10,000 Fibonacci numbers (big integers)",
+      "data_size": 10000,
+      "complexity_class": "O(n * digit_length)"
+    },
+    {
+      "id": "task14",
+      "name": "newton_sqrt",
+      "category": "numerical_computation",
+      "description": "Newton's method square root for 100K numbers",
+      "data_size": 100000,
+      "complexity_class": "O(n * iterations)"
+    },
+    {
+      "id": "task15",
+      "name": "stats",
+      "category": "numerical_computation",
+      "description": "Compute mean, variance, std dev, skewness, kurtosis for 1M numbers",
+      "data_size": 1000000,
+      "complexity_class": "O(n)"
+    },
+    {
+      "id": "task16",
+      "name": "csv_parse",
+      "category": "data_transformation",
+      "description": "Parse and aggregate a generated 100K-row CSV",
+      "data_size": 100000,
+      "complexity_class": "O(n)"
+    },
+    {
+      "id": "task17",
+      "name": "json_transform",
+      "category": "data_transformation",
+      "description": "Transform nested JSON structure (50K records)",
+      "data_size": 50000,
+      "complexity_class": "O(n)"
+    },
+    {
+      "id": "task18",
+      "name": "dedup",
+      "category": "data_transformation",
+      "description": "Deduplicate 200K records with fuzzy matching",
+      "data_size": 200000,
+      "complexity_class": "O(n * bucket_size)"
+    },
+    {
+      "id": "task19",
+      "name": "group_aggregate",
+      "category": "data_transformation",
+      "description": "Group-by and aggregate operations on 500K records",
+      "data_size": 500000,
+      "complexity_class": "O(n)"
+    },
+    {
+      "id": "task20",
+      "name": "flatten",
+      "category": "data_transformation",
+      "description": "Flatten deeply nested dict structures (10K dicts, depth up to 10)",
+      "data_size": 10000,
+      "complexity_class": "O(n * total_nodes)"
+    }
+  ],
+  "solution_types": [
+    {
+      "id": "human_optimized",
+      "description": "Expert-level, performance-optimized code using efficient algorithms and data structures"
+    },
+    {
+      "id": "human_typical",
+      "description": "Readable, correct code typical of a mid-level developer"
+    },
+    {
+      "id": "llm_generated",
+      "description": "Typical LLM output with verbose naming, docstrings, validation, and over-engineering patterns"
+    }
+  ],
+  "categories": [
+    {"id": "sorting_searching", "name": "Sorting & Searching", "task_count": 5},
+    {"id": "string_processing", "name": "String Processing", "task_count": 5},
+    {"id": "numerical_computation", "name": "Numerical Computation", "task_count": 5},
+    {"id": "data_transformation", "name": "Data Transformation", "task_count": 5}
+  ]
+}
